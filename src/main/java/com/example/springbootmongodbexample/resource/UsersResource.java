@@ -11,14 +11,15 @@ import java.util.List;
 @RestController
 @RequestMapping("/rest/users")
 public class UsersResource {
-    private UsersRepository userRepository;
+    private UsersRepository UserRespository;
 
     public UsersResource(UsersRepository userRepository) {
-        this.userRepository = userRepository;
+        this.UserRespository = userRepository;
     }
 
     @GetMapping("/all")
     public List<Users> getAll() {
-        return userRepository.findAll();
+        return UserRespository.findAll();
     }
 }
+
